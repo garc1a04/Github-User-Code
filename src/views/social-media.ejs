@@ -1,0 +1,41 @@
+<div class="container-social-media">
+    <div class="column-1">
+        <div class="location">
+            <div>
+                <img src="./images/icon-location.svg">
+            </div>
+
+            <p class="space-mono-400"><%=locals.data.location || "Not available"%></p>
+        </div>
+
+        <div class="link">
+            <div>
+                <img src="./images/icon-website.svg">
+            </div>
+        
+
+            <a class="space-mono-400" href=<%= locals.data.blog || "#" %>> <%=locals.data.blog.split("/")[2] || "Not available"%> </a>
+        </div>
+    </div>
+
+    <div class="column-2">
+        <div class="Twitter">
+            <div>
+                <img src="./images/icon-twitter.svg">
+            </div>
+            
+            <a class="space-mono-400" 
+                href=<%= locals.data.twitter_username != null ? "https://x.com/" + locals.data.twitter_username : "#"%>> 
+                <%=locals.data.twitter_username || "Not available"%>
+            </a>
+        </div>
+
+        <div class="link">
+            <div>
+                <img src="./images/icon-company.svg">
+            </div>
+            
+            <p class="space-mono-400"> <%=locals.data.company || "Not available"%></p>
+        </div>
+    </div>
+</div>

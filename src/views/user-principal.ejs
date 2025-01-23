@@ -1,0 +1,20 @@
+
+<div class="user-principal">
+    <div class="image">
+        <img class="image-user" src=<%= locals.data.avatar_url %>>
+    </div>
+    
+    <div class="container-profile">
+        <div class="informations-user">
+            <div class="Title">
+                <h1 class="username space-mono-700"><%=locals.data.name%></h1>
+                
+                <a class="link-user space-mono-400" href=<%=locals.data.html_url%>>@<%=locals.data.login%></a>
+
+            </div>
+
+            <p class="joined-user space-mono-400"><%=locals.created%></p>
+        </div>
+        <p class="description space-mono-400 hidden"> <%=locals.data.bio || "This profile has no bio"%> </p>
+    </div>
+</div>

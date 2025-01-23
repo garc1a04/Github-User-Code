@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <title>Frontend Mentor | Github user search app</title>
+        <!--Style-->
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/theme.css">
+        <link rel="stylesheet" href="./styles/mediaQuery.css">
+    </head>
+    <body class='<%=locals.theme == "LIGHT" ? "animation" :"animation theme-light"%>'>
+        <main>
+            <div class="container">
+
+                <section class="icon">
+                    <div class="icon-container">
+                        <h1 class="brand click space-mono-700">devfinder</h1>
+
+                        <div class="click button-toggle">
+                            
+                            <p id="text" class="space-mono-400"><%=locals.theme%></p>
+
+                            <div>
+                                <img id="img-icon" src="./images/icon-sun.svg">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <section class="search-section">
+                    <% if(locals.dataErro) { %>
+                        <div class="error space-mono-400"> Error not found </div>
+                    <% } %>
+                    
+                    <form method="post" action="/submit" autocomplete="off">
+                        <div id="search" class="search-container search-background animation">
+                            <div class="search-icon">
+                                <img src="./images/icon-search.svg">
+                            </div>
+                            
+                            <input class="space-mono-400 animation" type="search" name="name" maxlength="40" placeholder="Search Github Username...">
+                            <button class="click space-mono-700">Search</button>
+                        </div>
+                    </form>
+                </section>
+    
+                <section class="user">
+                    <div id="#user" class="user-container animation">
+                        <%- include('user-principal.ejs') %>
+
+                        <div class="user-informations">
+                            <%- include('user-informations.ejs') %>
+    
+                            <%- include('social-media.ejs') %>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./script/script.js" type="module" async defer></script>
+    </body>
+</html>

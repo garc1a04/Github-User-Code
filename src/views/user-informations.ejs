@@ -1,0 +1,21 @@
+
+<p class="description-mobile space-mono-400"> <%=locals.data.bio || "This profile has no bio"%> </p>
+
+<div class="informations-repo animation">
+    <div class="container-informations-repo">
+        <div class="Repo">
+            <p class="Name space-mono-400">Repos</p>
+            <p class="Name-Number space-mono-700"><%=locals.data.public_repos%></p>
+        </div>
+
+        <div class="Followers">
+            <p class="Name space-mono-400">Followers</p>
+            <p class="Name-Number space-mono-700"><%=locals.data.followers%></p>
+        </div>
+
+        <div class="Following">
+            <p class="Name space-mono-400">Following</p>
+            <p class="Name-Number space-mono-700"><%=locals.data.following%></p>
+        </div>
+    </div>
+</div>

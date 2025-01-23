@@ -1,0 +1,39 @@
+:root {
+    --bg-color-body: hsl(220, 40%, 13%);
+    --search-background: hsl(222, 41%, 20%);
+    --user-background: hsl(222, 41%, 20%);
+    --repo-background:hsl(220, 40%, 13%);
+    --input-background: hsl(222, 41%, 20%);
+    --color-letter: #ffffff;
+    --placeholder-color: white;
+}
+
+.theme-light {
+    --bg-color-body: hsl(227, 100%, 98%);
+    --search-background: hsl(0, 0%, 100%);
+    --user-background: hsl(0, 0%, 100%);
+    --repo-background:hsl(227, 100%, 98%);
+    --input-background: hsl(0, 0%, 100%);
+    --color-letter: black;
+    --placeholder-color: black;
+}
+
+.animation{
+    transition: all 1s ease;
+}
+
+.background-button {
+    background-color: #61ABFF;
+}
+
+.error {
+    text-align: end; 
+    margin:0;
+    margin-bottom:5px;
+    color: red; 
+    font-size: 15px;
+}
+
+.click {
+    cursor: pointer;
+}
